@@ -28,7 +28,7 @@ const TopChartCard = ({
         alt={song?.attributes.albumName}
       />
       <div>
-        <Link to={`/songs/${song.key}`}>
+        <Link to={`/songs/${song.id}`}>
           <p className="text-xl text-white">{song?.attributes.albumName}</p>
         </Link>
         <Link to={`/songs/${song.key}`}>
@@ -121,7 +121,7 @@ const TopPlay = () => {
               style={{ width: "25%", height: "auto" }}
               className="shadow-lg rounded-full animate-slideright"
             >
-              <Link to={`/artists/${song?.attributes?.artistId}`}>
+              <Link to={`/artists/${song?.attributes?.artistName}`}>
                 <img
                   src={song?.attributes?.artwork?.url.replace(
                     "{w}x{h}",
